@@ -1,87 +1,87 @@
-# 🚗 Rent Car Local — Frontend
+# Rent Car Local — Frontend
 
 A responsive car rental web application built with **React.js** that provides a user-friendly interface for browsing cars, managing rental bookings, and accessing user and administrative features.
 
 This repository contains the frontend application, which communicates with a separate backend API to handle data, authentication, and booking operations.
 
-## 🔗 Project Repositories
+## Project Repositories
 
-- **Frontend (Current Repository):** [RENT_CAR_LOCAL_FRONTEND](https://github.com/SupainNandy/RENT_CAR_LOCAL_FRONTEND)
+- **Frontend:** [RENT_CAR_LOCAL_FRONTEND](https://github.com/SupainNandy/RENT_CAR_LOCAL_FRONTEND)
 - **Backend API:** [RENT_CAR_LOCAL](https://github.com/SupainNandy/RENT_CAR_LOCAL)
 
-## ✨ Features
+## Features
 
-### 👤 User Features
+### User Features
 
 - User registration and login.
 - Browse available cars and view car details.
 - Book rental vehicles.
 - View personal bookings and booking history.
-- Manage user profile information, where implemented.
+- Manage user profile information.
 - Responsive interface for different screen sizes.
 
-### 🛠️ Admin Features
+### Admin Features
 
 - Access the administrative dashboard.
 - Manage car listings.
 - View and manage customer bookings.
-- Review booking status and related information.
-- View dashboard statistics, where implemented.
+- Review booking statuses and related information.
+- View dashboard statistics.
 
-### 🎨 UI and Application Features
+### UI and Application Features
 
 - Component-based React architecture.
 - Client-side navigation and routing.
-- API integration with the backend.
+- Backend API integration.
 - Form handling and user input validation.
 - Reusable UI components.
 - Responsive layouts for desktop and mobile devices.
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |---|---|
 | React.js | Frontend UI development |
 | Vite | Development server and build tool |
 | JavaScript | Application logic |
-| Tailwind CSS / Bootstrap | Styling, if configured in the project |
-| React Router | Client-side navigation, if configured |
-| Axios | HTTP requests, if configured |
-| Context API / Zustand | State management, if configured |
-| Git & GitHub | Version control |
+| Tailwind CSS and Bootstrap | Styling and responsive layouts |
+| React Router | Client-side navigation |
+| Axios | HTTP requests and API integration |
+| Context API and Zustand | State management |
+| Git and GitHub | Version control |
 
-## 🏗️ Application Architecture
+## Application Architecture
 
 The frontend and backend are maintained in separate repositories.
 
 ```text
 User
- │
- ▼
+  |
+  v
 React Frontend
 (RENT_CAR_LOCAL_FRONTEND)
- │
- │ HTTP Requests
- ▼
+  |
+  | HTTP Requests
+  v
 Express REST API
 (RENT_CAR_LOCAL)
- │
- ▼
+  |
+  v
 MongoDB Database
 ```
 
-The frontend handles the user interface and client-side interactions. The backend handles server-side business logic, database operations, and protected API requests.
+The frontend manages the user interface, navigation, and client-side interactions. The backend handles business logic, authentication, booking operations, and database interactions.
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running the application, install:
 
 - [Node.js](https://nodejs.org/)
 - npm
 - Git
-- The backend API and its required database configuration
+- MongoDB
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -98,15 +98,13 @@ npm install
 
 ### 3. Configure the Backend API URL
 
-Configure the frontend to use your backend's local or deployed API URL.
-
-For example, if your Vite application uses an environment variable named `VITE_API_URL`, create a `.env` file:
+Create a `.env` file in the frontend root directory and configure the backend API URL.
 
 ```env
 VITE_API_URL=http://localhost:5000
 ```
 
-Use the exact environment variable name and API URL expected by your existing code. Do not add this variable unless the frontend is configured to read it.
+Ensure the environment variable matches the name used in the frontend source code.
 
 ### 4. Start the Development Server
 
@@ -114,7 +112,7 @@ Use the exact environment variable name and API URL expected by your existing co
 npm run dev
 ```
 
-Open the local URL displayed in your terminal, commonly:
+Open the local URL displayed in your terminal, usually:
 
 ```text
 http://localhost:5173
@@ -122,15 +120,13 @@ http://localhost:5173
 
 ### 5. Start the Backend
 
-Follow the setup instructions in the backend repository:
+Clone and configure the backend repository by following its setup instructions:
 
-**[Backend Setup — RENT_CAR_LOCAL](https://github.com/SupainNandy/RENT_CAR_LOCAL)**
+**[RENT_CAR_LOCAL — Backend Repository](https://github.com/SupainNandy/RENT_CAR_LOCAL)**
 
-Ensure the backend server is running and its CORS configuration permits requests from the frontend's origin.
+Ensure the backend server is running, MongoDB is configured, and CORS allows requests from the frontend origin.
 
-## 📁 Project Structure
-
-The following is an illustrative React project structure. Refer to the actual repository for the exact files and folders.
+## Project Structure
 
 ```text
 RENT_CAR_LOCAL_FRONTEND/
@@ -149,22 +145,23 @@ RENT_CAR_LOCAL_FRONTEND/
 └── README.md
 ```
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - Never expose private API keys, tokens, or backend secrets in frontend code.
 - Keep environment-specific configuration out of committed `.env` files.
-- Do not rely on frontend route protection alone to secure administrative operations.
-- Validate permissions and authentication on the backend.
+- Protect administrative operations using backend authentication and authorization.
+- Validate user input on both the frontend and backend.
+- Store sensitive credentials securely using environment variables.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Improve accessibility and mobile responsiveness.
 - Add automated component and integration tests.
 - Enhance loading states and API error handling.
-- Improve search, filtering, and sorting for car listings.
-- Add performance optimizations and production build checks.
+- Improve car search, filtering, and sorting.
+- Optimize application performance and production builds.
 
-## 👨‍💻 Author
+## Author
 
 **Supain Nandy**
 
@@ -172,10 +169,10 @@ RENT_CAR_LOCAL_FRONTEND/
 - Frontend Repository: [RENT_CAR_LOCAL_FRONTEND](https://github.com/SupainNandy/RENT_CAR_LOCAL_FRONTEND)
 - Backend Repository: [RENT_CAR_LOCAL](https://github.com/SupainNandy/RENT_CAR_LOCAL)
 
-## 📄 License
+## License
 
-Add a license if one has been selected for this project.
+This project does not currently specify a license.
 
 ---
 
-⭐ If you find this project interesting, consider giving the repository a star!
+If you find this project interesting, consider giving the repository a star!
